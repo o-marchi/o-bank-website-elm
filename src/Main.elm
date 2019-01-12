@@ -3,6 +3,8 @@ module Main exposing (..)
 import Browser
 import Html exposing (Html, text, div, h1, img)
 import Html.Attributes exposing (src)
+import Bootstrap.CDN as CDN
+import Bootstrap.Grid as Grid
 
 
 ---- MODEL ----
@@ -36,9 +38,17 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ img [ src "/logo.svg" ] []
-        , h1 [] [ text "Your Elm App is working!" ]
+    Grid.container []
+        [ CDN.stylesheet
+        , Grid.row []
+            [ Grid.col [] [ h1 [] [ text "AAAA" ] ]
+            , Grid.col [] [ h1 [] [ text "AAAA" ] ]
+            , Grid.col [] [ h1 [] [ text "AAAA" ] ]
+            , Grid.col [] [ h1 [] [ text "AAAA" ] ]
+            , Grid.col [] [ h1 [] [ text "AAAA" ] ]
+            , Grid.col [] [ h1 [] [ text "AAAA" ] ]
+            , Grid.col [] [ h1 [] [ text "AAAA" ] ]
+            ]
         ]
 
 
